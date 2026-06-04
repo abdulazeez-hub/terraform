@@ -19,3 +19,5 @@ resource "aws_instance" "web" {
     Name = "terraform-ec2"
   }
 }
+
+{}
