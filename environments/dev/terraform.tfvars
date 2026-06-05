@@ -1,6 +1,0 @@
-aws_region   = "eu-north-1"
-environment  = "dev"
-ami_id       = "ami-067bcf851477ebb78"
-instance_type = "t3.micro"
-key_name = "flask-app"
-sg_name = "allow-ssh"
