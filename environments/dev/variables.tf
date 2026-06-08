@@ -21,3 +21,7 @@ variable "key_name" {
 variable "sg_name" {
   type = string
 }
+
+variable "vpc_name" {
+  type = string
+}

@@ -7,3 +7,10 @@ module "ec2" {
   key_name      = var.key_name
   sg_name       = var.sg_name
 }
+
+module "vpc" {
+  source = "../../modules/vpc"
+
+  vpc_cidr = "10.0.0.0/16"
+  vpc_name = var.vpc_name
+}
