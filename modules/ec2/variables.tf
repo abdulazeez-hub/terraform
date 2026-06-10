@@ -25,3 +25,7 @@ variable "vpc_id" {
 variable "subnet_id" {
   type = string
 }
+
+variable "allowed_ssh_cidr" {
+  type = list(string)
+}

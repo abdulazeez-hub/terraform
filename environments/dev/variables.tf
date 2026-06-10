@@ -26,6 +26,10 @@ variable "sg_name" {
   type = string
 }
 
+variable "allowed_ssh_cidr" {
+  type = list(string)
+}
+
 variable "vpc_name" {
   type = string
 }

@@ -1,5 +1,5 @@
 resource "aws_security_group" "ec2_sg" {
-  name        = var.sg_name
+  name        = "${var.instance_name}-sg"
   description = "Allow SSH"
   vpc_id      = var.vpc_id
 
@@ -8,7 +8,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = var.allowed_ssh_cidr
   }
 
   ingress {
@@ -25,6 +25,11 @@ resource "aws_security_group" "ec2_sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tags = {
+    Name = "${var.instance_name}-sg"
+  }
+
 }
 
 resource "aws_instance" "this" {

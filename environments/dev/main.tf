@@ -23,6 +23,7 @@ module "ec2" {
   instance_type = var.instance_type
   key_name      = var.key_name
   sg_name       = var.sg_name
+  allowed_ssh_cidr = var.allowed_ssh_cidr
   vpc_id        = module.vpc.vpc_id
   subnet_id     = module.vpc.public_subnet_1_id
 }
