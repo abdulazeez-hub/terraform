@@ -1,5 +1,5 @@
 resource "aws_security_group" "ec2_sg" {
-  name        = "ec2-sg"
+  name        = var.sg_name
   description = "Allow SSH"
   vpc_id      = var.vpc_id
 
@@ -34,6 +34,6 @@ resource "aws_instance" "this" {
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   tags = {
-    Name = "web-server"
+    Name = var.instance_name
   }
 }
