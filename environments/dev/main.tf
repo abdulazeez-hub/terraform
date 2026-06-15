@@ -27,3 +27,23 @@ module "ec2" {
   vpc_id        = module.vpc.vpc_id
   subnet_id     = module.vpc.public_subnet_1_id
 }
+
+module "rds" {
+  source = "../../modules/rds"
+
+  db_name = "appdb"
+
+  instance_class = "db.t3.micro"
+
+  username = "admin"
+  password = var.db_password
+
+  vpc_id = module.vpc.vpc_id
+
+  subnet_ids = [
+    module.vpc.private_subnet_1_id,
+    module.vpc.private_subnet_2_id
+  ]
+
+  ec2_security_group_id = module.ec2.security_group_id
+}

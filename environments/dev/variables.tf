@@ -61,3 +61,10 @@ variable "az_1" {
 variable "az_2" {
   type = string
 }
+
+###RDS Variables
+variable "db_password" {
+  type      = string
+  sensitive = true
+}
+
