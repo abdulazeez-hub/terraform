@@ -1,0 +1,31 @@
+output "instance_id" {
+  value = module.ec2.instance_id
+}
+
+output "public_ip" {
+  value = module.ec2.public_ip
+}
+
+output "private_ip" {
+  value = module.ec2.private_ip
+}
+
+output "vpc_id" {
+  value = module.vpc.vpc_id
+}
+
+output "public_subnet_1_id" {
+  value = module.vpc.public_subnet_1_id
+}
+
+output "public_subnet_2_id" {
+  value = module.vpc.public_subnet_2_id
+}
+
+output "private_subnet_1_id" {
+  value = module.vpc.private_subnet_1_id
+}
+
+output "private_subnet_2_id" {
+  value = module.vpc.private_subnet_2_id
+}
