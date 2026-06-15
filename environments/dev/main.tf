@@ -31,12 +31,12 @@ module "ec2" {
 module "rds" {
   source = "../../modules/rds"
 
-  db_name = "appdb"
+  db_name = var.db_name
 
   instance_class = "db.t3.micro"
 
-  username = "admin"
-  password = var.db_password
+  db_username = var.db_username
+  db_password = var.db_password
 
   vpc_id = module.vpc.vpc_id
 
