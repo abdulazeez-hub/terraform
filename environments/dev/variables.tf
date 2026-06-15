@@ -76,3 +76,10 @@ variable "db_password" {
   sensitive = true
 }
 
+variable "engine_version" {
+  type = string
+}
+
+variable "instance_class" {
+  type = string
+}

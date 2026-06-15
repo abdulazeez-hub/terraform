@@ -26,3 +26,7 @@ variable "subnet_ids" {
 variable "ec2_security_group_id" {
   type = string
 }
+
+variable "engine_version" {
+  type = string
+}

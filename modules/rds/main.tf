@@ -32,7 +32,7 @@ resource "aws_db_instance" "this" {
   identifier = var.db_name
 
   engine         = "postgres"
-  engine_version = "17.4"
+  engine_version = var.engine_version
 
   instance_class = var.instance_class
 

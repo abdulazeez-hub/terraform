@@ -33,11 +33,11 @@ module "rds" {
 
   db_name = var.db_name
 
-  instance_class = "db.t3.micro"
+  instance_class = "db.t4g.micro"
 
   db_username = var.db_username
   db_password = var.db_password
-
+  engine_version = var.engine_version
   vpc_id = module.vpc.vpc_id
 
   subnet_ids = [
