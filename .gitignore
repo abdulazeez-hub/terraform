@@ -1,5 +1,8 @@
 # Local .terraform directories
 .terraform/
+bootstrap/s3lock
+bootstrap/.terraform.lock.hcl
+
 
 # .tfstate files
 *.tfstate
